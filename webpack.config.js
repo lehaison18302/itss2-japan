@@ -17,6 +17,7 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -32,7 +33,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
